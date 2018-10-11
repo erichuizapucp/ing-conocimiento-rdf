@@ -1,0 +1,4 @@
+1. Realizar una búsqueda
+2. Inferencia simple
+3. Validación de esquemas
+4. Reglas y Justificación

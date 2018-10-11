@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+        xmlns:schema="http://schema.org/"
+>
+    <schema:Hotel rdf:nodeID="N2a955a55893e446b9d66d0c7c4b25dc1">
+        <schema:description>A beautifully located business hotel right in the
+            heart of the alps. Watch the sun rise over the scenic Inn valley while
+            enjoying your morning coffee.</schema:description>
+        <schema:telephone>+43 512 8000-0</schema:telephone>
+        <schema:faxNumber>+43 512 8000-99</schema:faxNumber>
+        <schema:name>ACME Hotel Innsbruck</schema:name>
+    </schema:Hotel>
+    <rdf:Description rdf:about="">
+        <rdfa:usesVocabulary rdf:resource="http://schema.org/"/>
+    </rdf:Description>
+</rdf:RDF>
