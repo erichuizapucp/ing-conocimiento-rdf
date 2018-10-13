@@ -4,7 +4,7 @@ import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.FileManager;
 
 public class Search {
-    private static final String EXAMPLE_01_FILE = "minimal-example.rdf";
+    private static final String EXAMPLE_01_FILE = "peru-hotels.rdf";
     private static final String EXAMPLE_02_FILE = "geo-position.rdf";
     private static final String EXAMPLE_03_FILE = "telephone-fax.rdf";
 
