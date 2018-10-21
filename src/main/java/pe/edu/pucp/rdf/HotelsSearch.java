@@ -6,15 +6,14 @@ import pe.edu.pucp.rdf.selectors.HotelPriceSelector;
 import pe.edu.pucp.rdf.vocabulary.SchemaDOTOrg;
 
 public class HotelsSearch {
-    private static final String EXAMPLE_FILE = "peru-hotels.rdf";
-    private static final String NS = "http://pucp.edu.pe/hotels/";
+    private final String RDF_FILE = "peru-hotels.rdf";
 
     private FileManager fileManager;
     private Model model;
 
     public HotelsSearch() {
         fileManager = FileManager.get();
-        model = fileManager.loadModel(EXAMPLE_FILE);
+        model = fileManager.loadModel(RDF_FILE);
     }
 
     public void hotelsByName(String hotelName) {

@@ -27,6 +27,17 @@ public class Main {
                     hotelsSearch.hotelsByPrice(price);
                 }
             }
+
+            if (cmd.hasOption("i")) {
+                HotelsInference hotelsInference = new HotelsInference();
+                if (cmd.hasOption("super-class-runtime")) {
+                    hotelsInference.addSuperClassesAtRuntime();
+                }
+                if (cmd.hasOption("super-class")) {
+                    String superClass = cmd.getOptionValue("super-class");
+                    hotelsInference.hotelsInferenceSubClass(superClass);
+                }
+            }
         }
         catch (ParseException e) {
             System.err.println(e);
@@ -59,6 +70,16 @@ public class Main {
 
     private static Options buildHotelInferenceOptions(Options options) {
         options.addOption("i", "inferences", false, "performs inferences in RDF");
+        options.addOption(Option.builder()
+                .longOpt("super-class-runtime")
+                .desc("Add super classes at runtime")
+                .build());
+        options.addOption(Option.builder()
+                .longOpt("super-class")
+                .desc("Determine super classes based on RDF")
+                .hasArg()
+                .argName("SUPERCLASS")
+                .build());
         return options;
     }
 }

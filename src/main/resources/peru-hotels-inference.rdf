@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:schema="http://schema.org/"
+>
+    <schema:LodgingBusiness rdf:about="http://pucp.edu.pe/LodgingBusiness/accord-hotels-group">
+        <schema:name>Accord Hotels Group</schema:name>
+    </schema:LodgingBusiness>
+    <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/novotel-san-isidro">
+        <rdfs:subClassOf rdf:resource="http://pucp.edu.pe/LodgingBusiness/accord-hotels-group"/>
+        <schema:name>Novotel San Isidro</schema:name>
+        <schema:address>
+            <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/novotel-san-isidro">
+                <schema:addressRegion>Lima</schema:addressRegion>
+                <schema:streetAddress>Av. Victor Andrés Belaúnde 198, San Isidro 15073</schema:streetAddress>
+                <schema:addressLocality>San Isidro</schema:addressLocality>
+                <schema:addressCountry>Perú</schema:addressCountry>
+                <schema:postalCode>Lima 27</schema:postalCode>
+            </schema:PostalAddress>
+        </schema:address>
+        <schema:photo rdf:resource="../media/novotel-san-isidro-front.png"/>
+        <schema:starRating>
+            <schema:Rating rdf:about="http://pucp.edu.pe/ratings/novotel-san-isidro">
+                <schema:ratingValue>4</schema:ratingValue>
+            </schema:Rating>
+        </schema:starRating>
+        <schema:telephone>+51 13159999</schema:telephone>
+        <schema:description>Ubicado en el distrito de San Isidro, frente al Centro Empresarial
+            más importante de Lima y a 10 minutos de Miraflores. Ubicación perfecta para negocios o turismo,
+            con fácil acceso a las principales atracciones de la ciudad: Huaca Huallamarca,
+            Parque de l a Reserva y su Circuito Mágico del Agua, Plaza de Armas y Catedral de Lima.
+            Novotel Lima se encuentra cercano a restaurantes, museos, centros culturales, etc.
+            Disfrute de la cocina peruana e internacional en nuestro restaurante, terraza y bar.</schema:description>
+        <schema:priceRange>$100 - $350</schema:priceRange>
+    </schema:Hotel>
+    <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/hyatt-centric-san-isidro">
+        <schema:name>Hyatt Centric San Isidro</schema:name>
+        <schema:address>
+            <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/hyatt-centric-san-isidro">
+                <schema:addressRegion>Lima</schema:addressRegion>
+                <schema:streetAddress>Av Jorge Basadre 367, San Isidro 15073</schema:streetAddress>
+                <schema:addressLocality>San Isidro</schema:addressLocality>
+                <schema:addressCountry>Perú</schema:addressCountry>
+                <schema:postalCode>Lima 27</schema:postalCode>
+            </schema:PostalAddress>
+        </schema:address>
+        <schema:photo rdf:resource="../media/hyatt-centric-san-isidro-front.png"/>
+        <schema:starRating>
+            <schema:Rating rdf:about="http://pucp.edu.pe/ratings/hyatt-centric-san-isidro">
+                <schema:ratingValue>4</schema:ratingValue>
+            </schema:Rating>
+        </schema:starRating>
+        <schema:telephone>+51 16111234</schema:telephone>
+        <schema:description>Comience la aventura alojando en el moderno distrito corporativo de San Isidro.
+            Hyatt Centric San Isidro Lima cuenta con una ubicación conveniente para conectarse con la ciudad y explorar
+            los interesantes barrios que Lima ofrece. Viaje en el tiempo visitando las ruinas esparcidas
+            por la ciudad o deléitese con la conocida gastronomía local solo a minutos del hotel.
+            Luego, descanse en las acogedoras habitaciones diseñadas para el viajero moderno.</schema:description>
+        <schema:priceRange>$150 - $500</schema:priceRange>
+    </schema:Hotel>
+    <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/jw-marriot">
+        <schema:name>JW Marriot Hotel Lima</schema:name>
+        <schema:address>
+            <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/jw-marriot">
+                <schema:addressRegion>Lima</schema:addressRegion>
+                <schema:streetAddress>Technikerstrasse 21</schema:streetAddress>
+                <schema:addressLocality>Miraflores</schema:addressLocality>
+                <schema:addressCountry>Perú</schema:addressCountry>
+                <schema:postalCode>Lima 18</schema:postalCode>
+            </schema:PostalAddress>
+        </schema:address>
+        <schema:photo rdf:resource="../media/jw-marriot-front.png"/>
+        <schema:starRating>
+            <schema:Rating rdf:about="http://pucp.edu.pe/ratings/jw-marriot">
+                <schema:ratingValue>5</schema:ratingValue>
+            </schema:Rating>
+        </schema:starRating>
+        <schema:telephone>+51 1 2177000</schema:telephone>
+        <schema:description>Regálese una célebre experiencia hotelera en el JW Marriott Hotel Lima, reconocido con el
+            galardón Readers’ Choice 2015 de la revista Condé Nast Traveler como uno de los 25 mejores hoteles de América del Sur.
+            Situado frente a los imponentes acantilados del distrito de Miraflores, nuestro hotel ofrece una ubicación privilegiada
+            para visitar atracciones locales, como las playas de la Costa Verde, las ruinas incas de Huaca Pucllana,
+            el centro comercial Larcomar, el Parque Playa Redondo, el Parque Kennedy y el distrito Barranco,
+            famoso por sus museos y galerías de arte. Una lujosa torre de cristal de 25 pisos,
+            nuestro hotel en Lima, Perú ofrece 300 habitaciones con una vista panorámica del Océano Pacífico y un servicio
+            personalizado de 5 estrellas que incluye estacionamiento gratis en las instalaciones, servicio de Concierge,
+            servicio a la habitación las 24 horas y de cuidado de niños; y para no perder detalle durante su estadía,
+            acceso a internet de alta velocidad gratis. Las amenidades de nuestro alojamiento ofrecen ropa de cama de lujo,
+            televisor de pantalla plana con una extensa oferta de entretenimiento, cafetera, agua embotellada gratis y
+            exclusivos artículos de tocador. Consiéntase en nuestro spa, el cual ofrece una variada oferta de tratamientos.
+            Si lo prefiere, visite nuestro moderno gimnasio con equipo de entrenamiento cardiovascular, pesas y saunas,
+            así como la fabulosa piscina al aire libre. Para saborear la deliciosa gastronomía peruana, visite La Vista Restaurant,
+            una de las mejores opciones culinarias de Lima, así como el JW Sushi Ceviche Lounge, el cual ofrece
+            una fusión de platillos clásicos peruanos con un toque asiático. Si desea celebrar un evento,
+            nuestro hotel en Miraflores, Lima dispone de versátiles salas de reuniones con personal de planificación y catering.
+            Ya sea que nos visita por negocios o placer, en el JW Marriott Hotel Lima lo esperamos para brindarle una experiencia
+            de lujo sin precedentes.</schema:description>
+        <schema:priceRange>$300 - $800</schema:priceRange>
+    </schema:Hotel>
+    <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/jw-marriot-convento-cusco">
+        <schema:name>JW Marriot Convento Cusco</schema:name>
+        <schema:address>
+            <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/jw-marriot-convento-cusco">
+                <schema:addressRegion>Cusco</schema:addressRegion>
+                <schema:streetAddress>Esquina de la Calle Ruinas 432 y, Calle San Agustin, Cusco 08001</schema:streetAddress>
+                <schema:addressLocality>Cusco</schema:addressLocality>
+                <schema:addressCountry>Perú</schema:addressCountry>
+                <schema:postalCode>Cusco 08001</schema:postalCode>
+            </schema:PostalAddress>
+        </schema:address>
+        <schema:photo rdf:resource="../media/jw-marriot-convento-cusco-front.png"/>
+        <schema:starRating>
+            <schema:Rating rdf:about="http://pucp.edu.pe/ratings/acme-innsbruck">
+                <schema:ratingValue>5</schema:ratingValue>
+            </schema:Rating>
+        </schema:starRating>
+        <schema:telephone>+51 084582200</schema:telephone>
+        <schema:description>Bienvenido al JW Marriott El Convento Cusco, la propiedad principal de la marca Marriott en Cusco, Perú.
+            Ubicada en el centro histórico de la ciudad y a pocas cuadras de la Plaza Mayor, nuestro hotel de 5 estrellas se encuentra
+            completamente rodeado de los principales lugares de interés histórico, como la Plaza de Armas, la Catedral,
+            el museo Qoricancha y el Templo de San Blas. El Aeropuerto Internacional Alejandro Velasco Astete (CUZ) queda
+            a sólo 3 kilómetros de la propiedad. Nuestro hotel boutique está construido a 3,400 metros sobre el nivel del mar,
+            y cada una de nuestras 153 habitaciones cuenta con un sistema de oxígeno suplementario para la máxima comodidad de
+            nuestros huéspedes. Después de un día de exploración, regrese a nuestro hotel y disfrute del diseño personalizado en
+            torno al antiguo Convento Colonial de San Agustín del Siglo XVI, declarado Patrimonio Cultural por el Gobierno Peruano.
+            El convento ha sido cuidadosamente restaurado, y desde nuestro hotel se pueden apreciar los restos arqueológicos de los
+            periodos Pre-Inca, Inca, Colonial, Republicano y Contemporáneo, proporcionando al hotel un carácter único en Cusco,
+            ofreciendo una experiencia cultural inigualable a nuestros huéspedes. Además de su conveniente ubicación, hermosa arquitectura y
+            espaciosas habitaciones, nuestro hotel ofrece Qespi Restaurant &amp; Bar, conocido por sus deliciosas especialidades peruanas,
+            y Nina Soncco Lounge, famoso por su ambiente casual y tentadores cócteles hechos a mano. Y no olvide a aprovecharse de nuestro spa,
+            que ofrece una variedad de relajantes tratamientos andinos. Si está planificando una boda, recepción o evento corporativo en Cusco,
+            no hay mejor sitio que nuestro hotel—contamos con cinco elegantes salones de eventos además de un personal de organizadores
+            profesionales. Para una estadía inolvidable en el centro histórico de Cusco, Perú, haga su reserva hoy en el incomparable
+            JW Marriott El Convento Cusco.</schema:description>
+        <schema:priceRange>$250 - $70</schema:priceRange>
+    </schema:Hotel>
+</rdf:RDF>
