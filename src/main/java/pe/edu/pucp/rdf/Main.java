@@ -11,7 +11,6 @@ public class Main {
 
             CommandLineParser parser = new DefaultParser();
             CommandLine cmd = parser.parse(options, args);
-
             if (cmd.hasOption("s")) {
                 HotelsSearch hotelsSearch = new HotelsSearch();
                 if (cmd.hasOption("hotel-name")) {
@@ -25,6 +24,18 @@ public class Main {
                 if (cmd.hasOption("hotel-price")) {
                     double price = Double.parseDouble(cmd.getOptionValue("hotel-price"));
                     hotelsSearch.hotelsByPrice(price);
+                }
+                if (cmd.hasOption("hotel-district")) {
+                    String hotelDistrict = cmd.getOptionValue("hotel-district");
+                    hotelsSearch.hotelsByDistrict(hotelDistrict);
+                }
+                if (cmd.hasOption("hotel-postal-code")) {
+                    String hotelPostalCode = cmd.getOptionValue("hotel-postal-code");
+                    hotelsSearch.hotelsByPostalCode(hotelPostalCode);
+                }
+                if (cmd.hasOption("hotel-rating-value")) {
+                    int ratingValue = Integer.parseInt(cmd.getOptionValue("hotel-rating-value"));
+                    hotelsSearch.hotelsByMinumRatingValue(ratingValue);
                 }
             }
 
@@ -64,7 +75,24 @@ public class Main {
                 .hasArg()
                 .argName("PRICE")
                 .build());
-
+        options.addOption(Option.builder()
+                .longOpt("hotel-district")
+                .desc("Hotel district")
+                .hasArg()
+                .argName("DISTRICT")
+                .build());
+        options.addOption(Option.builder()
+                .longOpt("hotel-postal-code")
+                .desc("Hotel postal code")
+                .hasArg()
+                .argName("POSTAL_CODE")
+                .build());
+        options.addOption(Option.builder()
+                .longOpt("hotel-rating-value")
+                .desc("Hotel rating value")
+                .hasArg()
+                .argName("RATING_VALUE")
+                .build());
         return options;
     }
 

@@ -12,4 +12,8 @@ public class SchemaDOTOrg {
     public static final Property CITY = m.createProperty(uri, "city");
     public static final Property PRICE_RANGE = m.createProperty(uri, "priceRange");
     public static final Property LODGING_BUSINESS = m.createProperty(uri, "LodgingBusiness");
+
+    public static final Property DISTRICT = m.createProperty(uri, "addressLocality");
+    public static final Property POSTAL_CODE = m.createProperty(uri, "postalCode");
+    public static final Property RATING_VALUE = m.createProperty(uri, "ratingValue");
 }
