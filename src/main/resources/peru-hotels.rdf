@@ -8,6 +8,7 @@
         <schema:address>
             <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/novotel-san-isidro">
                 <schema:addressRegion>Lima</schema:addressRegion>
+                <schema:city>Lima</schema:city>
                 <schema:streetAddress>Av. Victor Andrés Belaúnde 198, San Isidro 15073</schema:streetAddress>
                 <schema:addressLocality>San Isidro</schema:addressLocality>
                 <schema:addressCountry>Perú</schema:addressCountry>
@@ -34,6 +35,7 @@
         <schema:address>
             <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/hyatt-centric-san-isidro">
                 <schema:addressRegion>Lima</schema:addressRegion>
+                <schema:city>Lima</schema:city>
                 <schema:streetAddress>Av Jorge Basadre 367, San Isidro 15073</schema:streetAddress>
                 <schema:addressLocality>San Isidro</schema:addressLocality>
                 <schema:addressCountry>Perú</schema:addressCountry>
@@ -58,6 +60,7 @@
         <schema:name>JW Marriot Hotel Lima</schema:name>
         <schema:address>
             <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/jw-marriot">
+                <schema:city>Lima</schema:city>
                 <schema:addressRegion>Lima</schema:addressRegion>
                 <schema:streetAddress>Technikerstrasse 21</schema:streetAddress>
                 <schema:addressLocality>Miraflores</schema:addressLocality>
@@ -98,6 +101,7 @@
         <schema:address>
             <schema:PostalAddress rdf:about="http://pucp.edu.pe/addresses/jw-marriot-convento-cusco">
                 <schema:addressRegion>Cusco</schema:addressRegion>
+                <schema:city>Cusco</schema:city>
                 <schema:streetAddress>Esquina de la Calle Ruinas 432 y, Calle San Agustin, Cusco 08001</schema:streetAddress>
                 <schema:addressLocality>Cusco</schema:addressLocality>
                 <schema:addressCountry>Perú</schema:addressCountry>
@@ -122,7 +126,7 @@
             El convento ha sido cuidadosamente restaurado, y desde nuestro hotel se pueden apreciar los restos arqueológicos de los
             periodos Pre-Inca, Inca, Colonial, Republicano y Contemporáneo, proporcionando al hotel un carácter único en Cusco,
             ofreciendo una experiencia cultural inigualable a nuestros huéspedes. Además de su conveniente ubicación, hermosa arquitectura y
-            espaciosas habitaciones, nuestro hotel ofrece Qespi Restaurant & Bar, conocido por sus deliciosas especialidades peruanas,
+            espaciosas habitaciones, nuestro hotel ofrece Qespi Restaurant &amp; Bar, conocido por sus deliciosas especialidades peruanas,
             y Nina Soncco Lounge, famoso por su ambiente casual y tentadores cócteles hechos a mano. Y no olvide a aprovecharse de nuestro spa,
             que ofrece una variedad de relajantes tratamientos andinos. Si está planificando una boda, recepción o evento corporativo en Cusco,
             no hay mejor sitio que nuestro hotel—contamos con cinco elegantes salones de eventos además de un personal de organizadores
