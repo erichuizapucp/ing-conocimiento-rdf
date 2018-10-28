@@ -3,7 +3,9 @@
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
         xmlns:schema="http://schema.org/"
->
+>    <schema:Accommodation rdf:about="http://pucp.edu.pe/Accommodation/hotel-room">
+         <schema:name>Hotel Room</schema:name>
+     </schema:Accommodation>
     <schema:LodgingBusiness rdf:about="http://pucp.edu.pe/LodgingBusiness/accord-hotels-group">
         <schema:name>Accord Hotels Group</schema:name>
     </schema:LodgingBusiness>
@@ -33,6 +35,13 @@
             Novotel Lima se encuentra cercano a restaurantes, museos, centros culturales, etc.
             Disfrute de la cocina peruana e internacional en nuestro restaurante, terraza y bar.</schema:description>
         <schema:priceRange>$100 - $350</schema:priceRange>
+        <schema:containsPlace>
+            <schema:HotelRoom rdf:about="http://pucp.edu.pe/hotelroom/novotel-san-isidro">
+                <rdfs:subClassOf rdf:resource="http://pucp.edu.pe/Accommodation/hotel-room"/>
+                <schema:name>Double Room</schema:name>
+                <schema:description>Our double rooms are spacious and comfortable.</schema:description>
+            </schema:HotelRoom>
+        </schema:containsPlace>
     </schema:Hotel>
     <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/hyatt-centric-san-isidro">
         <schema:name>Hyatt Centric San Isidro</schema:name>
@@ -97,6 +106,13 @@
             Ya sea que nos visita por negocios o placer, en el JW Marriott Hotel Lima lo esperamos para brindarle una experiencia
             de lujo sin precedentes.</schema:description>
         <schema:priceRange>$300 - $800</schema:priceRange>
+        <schema:containsPlace>
+            <schema:HotelRoom rdf:about="http://pucp.edu.pe/hotelroom/jw-marriot">
+                <rdfs:subClassOf rdf:resource="http://pucp.edu.pe/Accommodation/hotel-room"/>
+                <schema:name>Single Room</schema:name>
+                <schema:description>Our single rooms are cosy and comfortable.</schema:description>
+            </schema:HotelRoom>
+        </schema:containsPlace>
     </schema:Hotel>
     <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/jw-marriot-convento-cusco">
         <schema:name>JW Marriot Convento Cusco</schema:name>

@@ -48,6 +48,10 @@ public class Main {
                     String superClass = cmd.getOptionValue("super-class");
                     hotelsInference.hotelsInferenceSubClass(superClass);
                 }
+                if (cmd.hasOption("super-class-accommodation")) {
+                    String superClass = cmd.getOptionValue("super-class-accommodation");
+                    hotelsInference.hotelsAccommodationInferenceSubClass(superClass);
+                }
             }
         }
         catch (ParseException e) {
@@ -104,6 +108,12 @@ public class Main {
                 .build());
         options.addOption(Option.builder()
                 .longOpt("super-class")
+                .desc("Determine super classes based on RDF")
+                .hasArg()
+                .argName("SUPERCLASS")
+                .build());
+        options.addOption(Option.builder()
+                .longOpt("super-class-accommodation")
                 .desc("Determine super classes based on RDF")
                 .hasArg()
                 .argName("SUPERCLASS")

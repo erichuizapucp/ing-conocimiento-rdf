@@ -10,6 +10,7 @@ public class HotelsInference {
     private final String RDF_FILE = "peru-hotels-inference.rdf";
 
     private final String LB_NS = "http://pucp.edu.pe/LodgingBusiness/";
+    private final String AC_NS = "http://pucp.edu.pe/Accommodation/";
     private final String HOTELS_NS = "http://pucp.edu.pe/hotels/";
 
     private FileManager fileManager;
@@ -48,6 +49,17 @@ public class HotelsInference {
         InfModel infModel = ModelFactory.createRDFSModel(model);
 
         ResIterator it = infModel.listSubjectsWithProperty(RDFS.subClassOf, accordHotelGroup);
+        while (it.hasNext()) {
+            System.out.println(it.nextResource());
+        }
+    }
+
+
+    public void hotelsAccommodationInferenceSubClass(String superClass) {
+        Resource room = model.getResource(AC_NS + superClass);
+        InfModel infModel = ModelFactory.createRDFSModel(model);
+
+        ResIterator it = infModel.listSubjectsWithProperty(RDFS.subClassOf, room);
         while (it.hasNext()) {
             System.out.println(it.nextResource());
         }
