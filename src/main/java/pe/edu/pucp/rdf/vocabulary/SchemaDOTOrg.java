@@ -16,4 +16,14 @@ public class SchemaDOTOrg {
     public static final Property DISTRICT = m.createProperty(uri, "addressLocality");
     public static final Property POSTAL_CODE = m.createProperty(uri, "postalCode");
     public static final Property RATING_VALUE = m.createProperty(uri, "ratingValue");
+
+    public static final Property OFFER = m.createProperty(uri, "Offer");
+    public static final Property HOTEL_ROOM = m.createProperty(uri, "HotelRoom");
+
+    public static final Property PRICE = m.createProperty(uri, "price");
+    public static final Property PRICE_CURRENCY = m.createProperty(uri, "priceCurrency");
+    public static final Property VALID_FROM = m.createProperty(uri, "validFrom");
+    public static final Property VALID_THROUGH = m.createProperty(uri, "validThrough");
+    public static final Property OFFERS = m.createProperty(uri, "offers");
+    public static final Property MAKES_OFFERS = m.createProperty(uri, "makesOffers");
 }

@@ -24,11 +24,12 @@ public class HotelsInference {
     }
 
     public void addSuperClassesAtRuntime() {
-        Resource marriot = model.createResource(LB_NS + "marriot");
-        Resource marriotObject = model.createResource();
-        marriotObject.addProperty(SchemaDOTOrg.NAME, "Marriot");
+        Resource loggingBusiness = model.createResource(SchemaDOTOrg.LODGING_BUSINESS);
 
-        model.add(marriot, SchemaDOTOrg.LODGING_BUSINESS, marriotObject);
+        Resource marriot = model.createResource(LB_NS + "marriot");
+        marriot.addProperty(SchemaDOTOrg.NAME, "Marriot");
+
+        model.add(marriot, RDFS.subClassOf, loggingBusiness);
 
         Resource jwMarriot = model.getResource(HOTELS_NS + "jw-marriot");
         Resource marriotCusco = model.getResource(HOTELS_NS + "jw-marriot-convento-cusco");
@@ -38,7 +39,7 @@ public class HotelsInference {
 
         InfModel infModel = ModelFactory.createRDFSModel(model);
 
-        ResIterator it = infModel.listSubjectsWithProperty(RDFS.subClassOf, marriot);
+        ResIterator it = infModel.listSubjectsWithProperty(RDFS.subClassOf, loggingBusiness);
         while (it.hasNext()) {
             System.out.println(it.nextResource());
         }

@@ -1,0 +1,15 @@
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hotel: <http://pucp.edu.pe/hotels/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema> .
+
+[ChristmasLuxuryHotel:
+    (?hotel schema:starRating ?starRating)
+    (?starRating schema:ratingValue ?rating) equal(?rating, '5')
+    (?hotel schema:makesOffers ?offer)
+    (?offer schema:price ?price) lessThan(?price, 200)
+    (?offer schema:validFrom ?validFrom) equal(?validFrom, '2018-12-01T00:00Z')
+    (?offer schema:validThrough ?validThrough) equal(?validThrough, '2018-12-31T00:00Z')
+    ->
+    (?hotel rdfs:subClassOf hotel:christmasHotDealHotel)
+]

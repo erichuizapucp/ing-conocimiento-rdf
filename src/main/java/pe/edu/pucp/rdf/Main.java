@@ -8,6 +8,7 @@ public class Main {
             Options options = new Options();
             options = buildHotelSearchOptions(options);
             options = buildHotelInferenceOptions(options);
+            options = buildHotelsRulesOptions(options);
 
             CommandLineParser parser = new DefaultParser();
             CommandLine cmd = parser.parse(options, args);
@@ -51,6 +52,13 @@ public class Main {
                 if (cmd.hasOption("super-class-accommodation")) {
                     String superClass = cmd.getOptionValue("super-class-accommodation");
                     hotelsInference.hotelsAccommodationInferenceSubClass(superClass);
+                }
+            }
+
+            if (cmd.hasOption("r")) {
+                HotelsRules hotelsRules = new HotelsRules();
+                if (cmd.hasOption("christmas")) {
+                    hotelsRules.hotDealsForChristmas();
                 }
             }
         }
@@ -117,6 +125,15 @@ public class Main {
                 .desc("Determine super classes based on RDF")
                 .hasArg()
                 .argName("SUPERCLASS")
+                .build());
+        return options;
+    }
+
+    private static Options buildHotelsRulesOptions(Options options) {
+        options.addOption("r", "rules", false, "executes rules");
+        options.addOption(Option.builder()
+                .longOpt("christmas")
+                .desc("Hotels with deals for Christmas")
                 .build());
         return options;
     }
