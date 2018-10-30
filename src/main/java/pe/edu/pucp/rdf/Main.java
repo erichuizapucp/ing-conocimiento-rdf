@@ -9,6 +9,7 @@ public class Main {
             options = buildHotelSearchOptions(options);
             options = buildHotelInferenceOptions(options);
             options = buildHotelsRulesOptions(options);
+            options = buildHotelsSchemaValidationOptions(options);
 
             CommandLineParser parser = new DefaultParser();
             CommandLine cmd = parser.parse(options, args);
@@ -59,6 +60,17 @@ public class Main {
                 HotelsRules hotelsRules = new HotelsRules();
                 if (cmd.hasOption("christmas")) {
                     hotelsRules.hotDealsForChristmas();
+                }
+            }
+
+            if (cmd.hasOption("v")) {
+                HotelsSchemaValidation hotelsSchemaValidation = new HotelsSchemaValidation();
+                if (cmd.hasOption("validation1")) {
+                    hotelsSchemaValidation.hotelValidation1();
+                }
+
+                if (cmd.hasOption("validation2")) {
+                    hotelsSchemaValidation.hotelValidation2();
                 }
             }
         }
@@ -135,6 +147,16 @@ public class Main {
                 .longOpt("christmas")
                 .desc("Hotels with deals for Christmas")
                 .build());
+        return options;
+    }
+
+    private static Options buildHotelsSchemaValidationOptions(Options options) {
+        options.addOption("v", "validation", false, "schema validation");
+        options.addOption(Option.builder()
+                .longOpt("validation1").desc("validation 1").build());
+        options.addOption(Option.builder()
+                .longOpt("validation2").desc("validation 1").build());
+
         return options;
     }
 }

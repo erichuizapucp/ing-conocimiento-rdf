@@ -19,8 +19,6 @@ import java.util.List;
 public class HotelsRules {
     private final String RDF_FILE = "peru-hotels.rdf";
     private final String HOTELS_NS = "http://pucp.edu.pe/hotels/";
-    private static final String RDFS_NS = "http://www.w3.org/2000/01/rdf-schema#";
-    private static final String SCHEMA_NS = "http://schema.org/";
 
     private FileManager fileManager;
     private Model model;
