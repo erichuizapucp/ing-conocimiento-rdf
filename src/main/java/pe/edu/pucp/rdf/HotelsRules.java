@@ -1,6 +1,7 @@
 package pe.edu.pucp.rdf;
 
 import org.apache.jena.rdf.model.*;
+import org.apache.jena.reasoner.Derivation;
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.rulesys.GenericRuleReasoner;
 import org.apache.jena.reasoner.rulesys.Rule;
@@ -8,9 +9,11 @@ import org.apache.jena.util.FileManager;
 import org.apache.jena.vocabulary.RDFS;
 import pe.edu.pucp.rdf.vocabulary.SchemaDOTOrg;
 
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
+import java.util.Iterator;
 import java.util.List;
 
 public class HotelsRules {
@@ -70,14 +73,29 @@ public class HotelsRules {
 
         List<Rule> rules = Rule.rulesFromURL("rules/hotel-rules.rules");
         Reasoner reasoner = new GenericRuleReasoner(rules);
+        reasoner.setDerivationLogging(true);
         InfModel infModel = ModelFactory.createInfModel(reasoner, model);
 
         System.out.println("Lista de \"Hotels 5 estrellas con ofertas para Navidad\"");
         ResIterator hotels = infModel.listSubjectsWithProperty(RDFS.subClassOf, christmasHotDealHotel);
+
         while (hotels.hasNext()) {
             Resource resource = hotels.nextResource();
             System.out.println(resource);
         }
+
+        PrintWriter out = new PrintWriter(System.out);
+        for(StmtIterator i = infModel.listStatements(jwMarriot, RDFS.subClassOf, christmasHotDealHotel); i.hasNext(); ) {
+            Statement s = i.nextStatement();
+            System.out.println(s);
+
+            for (Iterator id = infModel.getDerivation (s); id.hasNext();) {
+                Derivation deriv = (Derivation) id.next();
+                deriv.printTrace(out, true);
+            }
+        }
+
+        out.flush();
     }
 
     private Resource populateOffer(Resource offer, double price, String currency, LocalDateTime validFrom, LocalDateTime validThrough) {
