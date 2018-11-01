@@ -2,7 +2,6 @@
 <rdf:RDF
         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:schema="http://schema.org/"
-        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
     <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/novotel-san-isidro">
         <schema:name>Novotel San Isidro</schema:name>
@@ -30,6 +29,12 @@
             Novotel Lima se encuentra cercano a restaurantes, museos, centros culturales, etc.
             Disfrute de la cocina peruana e internacional en nuestro restaurante, terraza y bar.</schema:description>
         <schema:priceRange>$100 - $350</schema:priceRange>
+        <schema:geo>
+            <schema:GeoCoordinates rdf:nodeID="Ne69f0fee3a5c4fee9835b660b3b61528">
+                <schema:latitude>47.2649990</schema:latitude>
+                <schema:longitude>11.3428720</schema:longitude>
+            </schema:GeoCoordinates>
+        </schema:geo>
     </schema:Hotel>
     <schema:Hotel rdf:about="http://pucp.edu.pe/hotels/hyatt-centric-san-isidro">
         <schema:name>Hyatt Centric San Isidro</schema:name>

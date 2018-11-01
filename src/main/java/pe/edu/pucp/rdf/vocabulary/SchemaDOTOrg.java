@@ -26,4 +26,6 @@ public class SchemaDOTOrg {
     public static final Property VALID_THROUGH = m.createProperty(uri, "validThrough");
     public static final Property OFFERS = m.createProperty(uri, "offers");
     public static final Property MAKES_OFFERS = m.createProperty(uri, "makesOffers");
+
+    public static final Property PERSON = m.createProperty(uri, "Person");
 }
